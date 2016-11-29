@@ -1,6 +1,4 @@
-/**
- * Created by uri3l on 11/6/2016.
- */
+
 'use strict';
 
 import React, { Component } from 'react';
@@ -28,7 +26,7 @@ class AboutAppPage extends Component {
     renderScene(route, navigator) {
         return (
             <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
-                <Text>Aplicatie pentru persoane interesate de masini.</Text>
+                <Text>Aplicatia pentru gestionarea persoanelor.</Text>
             </View>
         );
     }

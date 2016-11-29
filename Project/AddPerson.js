@@ -1,6 +1,4 @@
-/**
- * Created by uri3l on 11/7/2016.
- */
+
 'use strict';
 
 import React, { Component } from 'react';
@@ -70,7 +68,7 @@ class AddPerson extends Component {
         this.setState({
             visible:!this.state.visible
         });
-        let serverUrl='http://89.137.110.65:3000';
+        let serverUrl='http://192.168.43.237:3000';
         setTimeout(()=>{
             fetch(serverUrl+'/AddPerson?firstname=' + firstname +
                             '&lastname=' + lastname +
@@ -166,12 +164,22 @@ var NavigationBarRouteMapper = {
         );
     },
     RightButton(route, navigator, index, navState) {
-        return null;
+        return (
+            <Button style={{flex: 1, justifyContent: 'center'}}
+                    onPress={() => navigator.parentNavigator.push({
+                        id:'EmailService',
+                        name:'EmailService'
+                    })}>
+                <Text style={{color: 'white', margin: 10,}}>
+                    Email Service
+                </Text>
+            </Button>
+        );
     },
     Title(route, navigator, index, navState) {
         return (
             <Text style={{color: 'white', marginLeft: 80,marginTop:10,marginBottom:10, fontSize: 16}}>
-                Add Person
+                Add person
             </Text>
         );
     }

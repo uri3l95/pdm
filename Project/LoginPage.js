@@ -40,7 +40,7 @@ class LoginPage extends Component {
         });
         let username = this.state.username;
         let password = this.state.password;
-        let serverUrl='http://89.137.110.65:3000';
+        let serverUrl='http://192.168.1.2:3000';
         setTimeout(()=>{
             fetch(serverUrl+'/Login?username=' + username + '&password=' + password, {
                 method: 'POST',
@@ -78,7 +78,7 @@ class LoginPage extends Component {
     }
     renderScene(route, navigator) {
           let pic = {
-              uri: 'http://pngimg.com/upload/small/audi_PNG1722.png'
+              uri: 'http://www.clinica-fivasa.com/wp-content/uploads/2015/12/doctor_image.png'
           };
           return (
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>

@@ -18,7 +18,8 @@ var LoginPage = require('./LoginPage');
 var RegisterPage = require('./RegisterPage');
 var AboutAppPage=require('./AboutAppPage');
 var AfterLogin=require('./AfterLogin');
-var Add=require('./Add');
+var AddPerson=require('./AddPerson');
+var EService=require('./EmailService');
 export default class Project extends Component {
     render() {
         return (
@@ -66,12 +67,18 @@ export default class Project extends Component {
                         navigator={navigator} userID={route.passProps.id} username={route.passProps.username} firstname={route.passProps.firstname} lastname={route.passProps.lastname}/>
                 );
                 break;
-            case 'Add':
+            case 'AddPerson':
                 return (
-                    <Add
+                    <AddPerson
                         navigator={navigator}/>
                 );
                 break;
+            case 'EmailService':
+                return (
+                    <EService
+                        navigator={navigator}/>
+                );
+
             default:
                 return this.noRoute(navigator);
         }

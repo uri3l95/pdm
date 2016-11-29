@@ -1,6 +1,4 @@
-/**
- * Created by uri3l on 11/7/2016.
- */
+
 'use strict';
 
 import React, { Component } from 'react';
@@ -20,7 +18,7 @@ class AfterLogin extends Component {
         super(props);
         const ds=new ListView.DataSource({rowHasChanged:(r1,r2)=>r1!=r2});
         this.state={
-            jsonUrl:'http://89.137.110.65:3000/MyPersons?userId='+1,
+            jsonUrl:'http://192.168.1.2:3000/MyPersons?userId='+1,
             dataSource:ds.cloneWithRows(['n'])
         };
     }
@@ -97,8 +95,8 @@ var NavigationBarRouteMapper = {
         return (
             <Button style={{flex: 1, justifyContent: 'center'}}
                     onPress={() => navigator.parentNavigator.push({
-                        id:'AddPersons',
-                        name:'AddPersons'
+                        id:'AddPerson',
+                        name:'AddPerson'
                     })}>
                 <Text style={{color: 'white', margin: 10,}}>
                     Add person
